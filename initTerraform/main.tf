@@ -1,3 +1,4 @@
+
 provider "aws" {
   access_key = var.access_key
   secret_key = var.secret_key
@@ -134,13 +135,13 @@ output "instance_ip2" {
 
 resource "aws_instance" "westbank1_dep6" {
   provider = aws.west
-  ami                    = "ami-0cbd40f694b804622"
+  ami                    = "ami-0efcece6bed30fd98"
   instance_type          = "t2.medium"
   subnet_id              = aws_subnet.west_subnet1.id
-  vpc_security_group_ids = [aws_security_group.web_ssh.id]
+  vpc_security_group_ids = [aws_security_group.west_sg.id]
   availability_zone = "us-west-2a"
   user_data              = file("deploy.sh")
-  key_name = "d6_key"
+  #key_name = "d6_key"
 
 
   tags = {
@@ -149,13 +150,14 @@ resource "aws_instance" "westbank1_dep6" {
 }
 
 resource "aws_instance" "westbank2_dep6" {
-  ami                    = "ami-0cbd40f694b804622"
+  provider = aws.west
+  ami                    = "ami-0efcece6bed30fd98"
   instance_type          = "t2.medium"
-  subnet_id              = aws_subnet.west_subnet1.id
+  subnet_id              = aws_subnet.west_subnet2.id
   vpc_security_group_ids = [aws_security_group.west_sg.id]
   availability_zone = "us-west-2b"
   user_data              = file("deploy.sh")
-  key_name = "d6_key"
+  #key_name = "d6_key"
 
 
   tags = {
@@ -173,7 +175,7 @@ resource "aws_vpc" "west_vpc" {
   }
 }
 
-resource "aws_subnet" "west_subnet" {
+resource "aws_subnet" "west_subnet1" {
   provider = aws.west
   vpc_id                  = aws_vpc.west_vpc.id
   cidr_block              = "10.0.1.0/24"
@@ -185,7 +187,7 @@ resource "aws_subnet" "west_subnet" {
   }
 }
 
-resource "aws_subnet" "west_subnet1" {
+resource "aws_subnet" "west_subnet2" {
   provider = aws.west
   vpc_id                  = aws_vpc.west_vpc.id
   cidr_block              = "10.0.2.0/24"
