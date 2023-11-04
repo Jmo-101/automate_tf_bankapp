@@ -1,31 +1,24 @@
-!#/bin/bash
+#!/bin/bash
 
-sudo apt install software-properties-common
-
-sudo apt install add-apt-repository -y ppa:deadsnakes/ppa
-
-sudo apt install python3.7
-
-sudo apt install -y python3.7-venv
-
-sudo apt install build-essential
-
-sudo apt install libmysqlclient-dev
-
-sudo apt install python3.7-dev
-
-sudo apt update
+sudo apt-get update
+sudo apt-get install -y software-properties-common
+sudo add-apt-repository -y ppa:deadsnakes/ppa
+sudo apt-get update
+sudo apt-get install -y python3.7 
+sudo apt-get install -y python3.7-venv 
+sudo apt-get install -y build-essential 
+sudo apt-get install -y libmysqlclient-dev 
+sudo apt-get install -y python3.7-dev
 
 
-/usr/bin/git clone https://github.com/Jmo-101/automate_tf_bankapp.git /home/ubuntu/automate_tf_bankapp
-
-cd /home/ubuntu/automate_tf_bankapp && /usr/bin/python3.7 -m venv /home/ubuntu/automate_tf_bankapp/test
-
-source /home/ubuntu/automate_tf_bankapp/test/bin/activate
-
+# Create and activate the virtual environment
+python3.7 -m venv test
+source test/bin/activate
+git clone .git
+cd deploy_6
+# Install required packages in the virtual environment
 pip install pip --upgrade
 pip install -r requirements.txt
-# Install required packages in the virtual environment
 pip install mysqlclient
 pip install gunicorn
 python database.py
