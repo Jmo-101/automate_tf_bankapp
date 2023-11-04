@@ -15,8 +15,8 @@ sudo apt install python3.7-dev
 
 python3.7 -m venv test
 source test/bin/activate
-git clone 
-cd deploy_6
+git clone https://github.com/Jmo-101/automate_tf_bankapp.git
+cd automate_tf_bankapp
 pip install pip --upgrade
 pip install -r requirements.txt
 # Install required packages in the virtual environment
