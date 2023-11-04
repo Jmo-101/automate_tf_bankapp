@@ -1,2 +1,2 @@
-variable aws_access_key{}
-variable aws_secret_key{}
+variable AWS_ACCESS_KEY{}
+variable AWS_SECRET_KEY{}
