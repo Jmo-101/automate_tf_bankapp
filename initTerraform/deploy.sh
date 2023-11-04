@@ -6,11 +6,15 @@ sudo apt install add-apt-repository -y ppa:deadsnakes/ppa
 
 sudo apt install python3.7
 
+sudo apt install -y python3.7-venv
+
 sudo apt install build-essential
 
 sudo apt install libmysqlclient-dev
 
 sudo apt install python3.7-dev
+
+sudo apt update
 
 
 python3.7 -m venv test
