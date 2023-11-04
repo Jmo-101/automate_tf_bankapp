@@ -18,7 +18,7 @@ resource "aws_instance" "eastbank1_dep6" {
   subnet_id              = aws_subnet.pubsub1.id
   vpc_security_group_ids = [aws_security_group.web_ssh.id]
   availability_zone = "us-east-1a"
-  user_data              = file("deploy.sh")
+  user_data              = "${file("deploy.sh")}"
   key_name = "d6_key"
 
 
@@ -33,7 +33,7 @@ resource "aws_instance" "eastbank2_dep6" {
   subnet_id              = aws_subnet.pubsub2.id
   vpc_security_group_ids = [aws_security_group.web_ssh.id]
   availability_zone = "us-east-1b"
-  user_data              = file("deploy.sh")
+  user_data              = "${file("deploy.sh")}"
   key_name = "d6_key"
 
   tags = {
@@ -140,7 +140,7 @@ resource "aws_instance" "westbank1_dep6" {
   subnet_id              = aws_subnet.west_subnet1.id
   vpc_security_group_ids = [aws_security_group.west_sg.id]
   availability_zone = "us-west-2a"
-  user_data              = file("deploy.sh")
+  user_data              = "${file("deploy.sh")}"
   #key_name = "d6_key"
 
 
@@ -156,7 +156,7 @@ resource "aws_instance" "westbank2_dep6" {
   subnet_id              = aws_subnet.west_subnet2.id
   vpc_security_group_ids = [aws_security_group.west_sg.id]
   availability_zone = "us-west-2b"
-  user_data              = file("deploy.sh")
+  user_data              = "${file("deploy.sh")}"
   #key_name = "d6_key"
 
 
