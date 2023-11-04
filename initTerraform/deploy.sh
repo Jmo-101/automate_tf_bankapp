@@ -4,7 +4,7 @@ sudo apt install software-properties-common
 
 sudo apt install add-apt-repository -y ppa:deadsnakes/ppa
 
-sudo apt installpython3.7
+sudo apt install python3.7
 
 sudo apt install build-essential
 
