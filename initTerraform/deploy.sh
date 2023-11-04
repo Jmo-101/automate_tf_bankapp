@@ -17,11 +17,11 @@ sudo apt install python3.7-dev
 sudo apt update
 
 
-/usr/bin/git clone https://github.com/auzhangLABS/c4_deployment-6-main.git /home/ubuntu/c4_deployment-6-main
+/usr/bin/git clone https://github.com/Jmo-101/automate_tf_bankapp.git /home/ubuntu/automate_tf_bankapp
 
-cd /home/ubuntu/c4_deployment-6-main && /usr/bin/python3.7 -m venv /home/ubuntu/c4_deployment-6-main/test
+cd /home/ubuntu/automate_tf_bankapp && /usr/bin/python3.7 -m venv /home/ubuntu/automate_tf_bankapp/test
 
-source /home/ubuntu/c4_deployment-6-main/test/bin/activate
+source /home/ubuntu/automate_tf_bankapp/test/bin/activate
 
 pip install pip --upgrade
 pip install -r requirements.txt
