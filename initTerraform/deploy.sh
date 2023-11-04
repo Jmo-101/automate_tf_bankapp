@@ -17,10 +17,12 @@ sudo apt install python3.7-dev
 sudo apt update
 
 
-python3.7 -m venv test
-source test/bin/activate
-git clone https://github.com/Jmo-101/automate_tf_bankapp.git
-cd automate_tf_bankapp
+/usr/bin/git clone https://github.com/auzhangLABS/c4_deployment-6-main.git /home/ubuntu/c4_deployment-6-main
+
+cd /home/ubuntu/c4_deployment-6-main && /usr/bin/python3.7 -m venv /home/ubuntu/c4_deployment-6-main/test
+
+source /home/ubuntu/c4_deployment-6-main/test/bin/activate
+
 pip install pip --upgrade
 pip install -r requirements.txt
 # Install required packages in the virtual environment
