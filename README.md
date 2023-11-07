@@ -23,3 +23,30 @@ Within the Jenkins agent instance, Git commands were utilized to interact with t
 - `git add .`: Adds all files to be staged for commit.
 - `git commit -m "[commit_message]"`: Commits the staged changes with an appropriate message.
 - `git push origin [branch_name]`: Pushes the changes to the remote repository.
+
+## Databases
+
+To enhance security and minimize the risk of breaches, I utilized Amazon Web Services' managed database service known as Amazon RDS (Relational Database Service). Instead of having aech application have its own dedicated database within their own instance we used RDS. This approach allowed me to store data from all of the applications, irrespective of their region. Each RDS instance was housed within its own security group, ensuring isolation and security.
+
+To access the databases from our applications, I included the respective database endpoint in our `database`, `load_data`, and `app` files.
+
+## Jenkins Integration
+
+### Jenkinsfile Automation
+
+I implemented a Jenkins pipeline (Jenkinsfile) to automate the deployment process. The pipeline consisted of stages that consisted of  `terraform init`, `terraform plan` and `terraform apply`. 
+
+### Terraform Integration
+
+Within the Jenkinsfile, stages were added to interact with Terraform scripts (`initTerraform`). These Terraform scripts were designed to create instances in both the east and west regions of AWS. The scripts also included necessary user data configurations, ensuring that the instances were provisioned with all required dependencies for deploying my applications.
+
+To enable Jenkins to interact with AWS and deploy the applications, AWS credentials were configured within the Jenkins manager. These credentials were used by Jenkins during the execution of the Terraform scripts.
+
+The pipeline successfully executed a multibranch pipeline, automating the deployment process for our applications.
+
+## Applications
+
+### Load Balancers
+
+To optimize my infrastructure and enhance fault tolerance, load balancers were implemented for each regional instance. These load balancers were configured to distribute incoming traffic evenly between the two instances within each region. This load balancing strategy not only optimized resource utilization but also improved the reliability and availability of our applications.
+
