@@ -5,7 +5,8 @@
 
 ## Planning
 
-<img width="606" alt="Screenshot 2023-11-07 at 6 03 22 PM" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/96df3321-cbf5-48ac-a86c-d3c8484ee151">
+<img width="605" alt="Screenshot 2023-11-07 at 6 14 16 PM" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/024137d8-810a-41ac-88a6-d52eb99c8ea7">
+
 
 ## Purpose
 This project demonstrates the understanding of Terraform to deploy instances in 2 AWS regions. It also involves using Git commands in the command line to branch and push out code to the repository. Additionally, the project showcases the usage of Amazon RDS as a database to store banking client/user data.
