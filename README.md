@@ -30,6 +30,8 @@ To enhance security and minimize the risk of breaches, I utilized Amazon Web Ser
 
 To access the databases from our applications, I included the respective database endpoint in our `database`, `load_data`, and `app` files.
 
+<img width="200" alt="rds-endpoint" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/dba4a0d5-24c9-47b4-b2b3-677d6d5cd07d">
+
 ## Jenkins Integration
 
 ### Jenkinsfile Automation
@@ -44,7 +46,16 @@ To enable Jenkins to interact with AWS and deploy the applications, AWS credenti
 
 The pipeline successfully executed a multibranch pipeline, automating the deployment process for our applications.
 
+<img width="700" alt="dep6-jenkins" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/04f6a31f-52f8-49a8-bcfa-e928ad74e61c">
+
 ## Applications
+## East:
+<img width="700" alt="dep6-1east" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/bbee18d0-7ae3-4566-a287-a15d5a186d30">
+<img width="700" alt="dep6-2east" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/23e58ee9-4f89-4e8d-908f-ce693993a4ea">
+
+# West:
+<img width="700" alt="dep6-1" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/33c1e879-53cd-4a7d-863e-94073972d4db">
+<img width="700" alt="dep6-2" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/2579d3e6-14e4-442b-874b-ec9b1645e650">
 
 ### Load Balancers
 
