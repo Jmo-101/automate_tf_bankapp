@@ -50,14 +50,17 @@ The pipeline successfully executed a multibranch pipeline, automating the deploy
 
 ## Applications
 ## East:
-<img width="700" alt="dep6-1east" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/bbee18d0-7ae3-4566-a287-a15d5a186d30">
-<img width="700" alt="dep6-2east" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/23e58ee9-4f89-4e8d-908f-ce693993a4ea">
+<img width="500" alt="dep6-1east" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/bbee18d0-7ae3-4566-a287-a15d5a186d30">
+<img width="500" alt="dep6-2east" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/23e58ee9-4f89-4e8d-908f-ce693993a4ea">
 
 # West:
-<img width="700" alt="dep6-1" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/33c1e879-53cd-4a7d-863e-94073972d4db">
-<img width="700" alt="dep6-2" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/2579d3e6-14e4-442b-874b-ec9b1645e650">
+<img width="500" alt="dep6-1" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/33c1e879-53cd-4a7d-863e-94073972d4db">
+<img width="500" alt="dep6-2" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/2579d3e6-14e4-442b-874b-ec9b1645e650">
 
-### Load Balancers
+### Load Balancers & Optimization
 
-To optimize my infrastructure and enhance fault tolerance, load balancers were implemented for each regional instance. These load balancers were configured to distribute incoming traffic evenly between the two instances within each region. This load balancing strategy not only optimized resource utilization but also improved the reliability and availability of our applications.
+To optimize my infrastructure and enhance fault tolerance, load balancers were implemented for each regional instance. These load balancers were configured to distribute incoming traffic evenly between the two instances within each region. This load balancing strategy not only optimized resource utilization but also improved the reliability and availability of our applications. To further optimize the infrastructure, we can implement private subnets for the jenkins managers for more security purposes.
+
+<img width="800" alt="Screenshot 2023-11-06 at 8 02 04 PM" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/4d3a3117-5556-44ac-9eef-fdb561f91247">
+<img width="800" alt="Screenshot 2023-11-06 at 8 08 09 PM" src="https://github.com/Jmo-101/automate_tf_bankapp/assets/138607757/0bf7dfa4-7e41-4151-8e8f-e4a37933ec3b">
 
